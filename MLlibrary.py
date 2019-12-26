@@ -207,7 +207,7 @@ class LogisticRegression(MLlibrary):  # class for Linear Regression
         plt.ylabel('cost_train')
         plt.show()
 
-    """  # Model Selection
+    """  # Model Selection (presently, not included in the algorithm
     
     def to_0_1(self, h_prob):  # convert probabilites to true (1) or false (0) at cut-off 0.5
         return np.where(h_prob >= 0.5, 1, 0)
