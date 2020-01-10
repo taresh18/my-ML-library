@@ -43,4 +43,13 @@ class PreProcessing(object):  # parent class containing the common functions use
         arrays[1] = ((arrays[1] - np.mean(arrays[1])) / (np.max(arrays[1]) - np.min(arrays[1])))
         # returns a list containing all the fatures and target arrays
         return arrays
+    
+    def split_data(self, X, Y, split_ratio=0.8): 
+        # to split the training data into training and cross validation according to the split ratio
+        split_at = int(X.shape[0] * split_ratio)
+        X_train = X[: split_at, :]
+        Y_train = Y[: split_at, :]
+        X_cv = X[split_at :, :]
+        Y_cv = Y[split_at :, :]
+        return X_train, Y_train, X_cv, Y_cv
 
