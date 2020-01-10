@@ -54,4 +54,12 @@ class PreProcessing(object):  # parent class containing the common functions use
         X_cv = X[split_at :, :]
         Y_cv = Y[split_at :, :]
         return X_train, Y_train, X_cv, Y_cv
+    
+    def PP_data(self):
+        # returns the final pre processed data
+        arrays = self.mean_normalization()
+        [X_train, Y_train, X_cv, Y_cv] = self.split_data(arrays[0], arrays[2])
+        [X_test, Y_test] = [arrays[1], arrays[3]]
+        return X_train, Y_train, X_cv, Y_cv, X_test, Y_test
+        
 
