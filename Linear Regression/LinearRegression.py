@@ -88,3 +88,19 @@ class LinearRegression():
               count += 1
         accuracy = (float(count) / m) * 100
         return round(accuracy, 2)  # rounding off the accuracy to 2 decimal places and returning it
+    
+    def LinearRegression(self, X_train, Y_train, X_cv, Y_cv, X_test, Y_test, alpha=0.03, lamda=10, iterations=100 ,batch_size=1024):
+        [theta, cost_history] = self.training(X_train, Y_train, alpha, lamda, iterations, batch_size)
+
+        prediction_train = self.predicting(X_train, theta)
+        prediction_cv = self.predicting(X_cv, theta)
+        prediction_test = self.predicting(X_test, theta)
+
+        accuracy_train = self.accuracy(prediction_train, Y_train)
+        accuracy_cv = self.accuracy(prediction_cv, Y_cv)
+        accuracy_test = self.accuracy(prediction_test, Y_test)
+
+        self.plots(cost_history)
+        print("accuracy_train :", accuracy_train, "%") 
+        print("accuracy_cv :", accuracy_cv, "%") 
+        print("accuracy_test :", accuracy_test, "%")
