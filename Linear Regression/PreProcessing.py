@@ -2,7 +2,7 @@
 import numpy as np
 import pandas as pd
 
-class MLlibrary(object):  # parent class containing the common functions used in the algorithms
+class PreProcessing(object):  # parent class containing the common functions used in the algorithms
 
     def __init__(self, train_data_filename, test_data_filename):
         # initialiing the training and testing data file names
