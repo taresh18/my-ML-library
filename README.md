@@ -1,5 +1,5 @@
 # my-ML-library
-The Library consists of the implementation of following algorithms
+The Library consists of the implementation of following algorithms:
 1. Linear Regression
 2. Logistic Regression
 3. K Nearest Neighbours
