@@ -1,2 +1,7 @@
 # my-ML-library
-ML library for winter of code 2.0
+The Library consists of the implementation of following algorithms
+1. Linear Regression
+2. Logistic Regression
+3. K Nearest Neighbours
+4. Neural Network
+5. K Means Clustering
