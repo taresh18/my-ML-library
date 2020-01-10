@@ -2,6 +2,8 @@
 import numpy as np
 import pandas as pd
 
+######################### class for Pre Processing the data ########################
+
 class PreProcessing(object):  # parent class containing the common functions used in the algorithms
 
     def __init__(self, train_data_filename, test_data_filename):
